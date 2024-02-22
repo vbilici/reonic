@@ -13,7 +13,7 @@ exports[`ConfigForm matches snapshot 1`] = `
           class="flex flex-wrap gap-4 items-center mb-4"
         >
           <p
-            class="text-tremor-default text-tremor-content dark:text-dark-tremor-content"
+            class="text-tremor-default text-tremor-content dark:text-dark-tremor-content flex-grow"
           >
             Number of Chargepoints:
           </p>
@@ -74,7 +74,7 @@ exports[`ConfigForm matches snapshot 1`] = `
           class="flex flex-wrap gap-4 items-center mb-4"
         >
           <p
-            class="text-tremor-default text-tremor-content dark:text-dark-tremor-content"
+            class="text-tremor-default text-tremor-content dark:text-dark-tremor-content flex-grow"
           >
             Charging Power per Chargepoint (Kw):
           </p>
@@ -135,7 +135,7 @@ exports[`ConfigForm matches snapshot 1`] = `
           class="flex flex-wrap gap-4 items-center mb-4"
         >
           <p
-            class="text-tremor-default text-tremor-content dark:text-dark-tremor-content"
+            class="text-tremor-default text-tremor-content dark:text-dark-tremor-content flex-grow"
           >
             Consumption of Cars:
           </p>
@@ -149,6 +149,69 @@ exports[`ConfigForm matches snapshot 1`] = `
               placeholder="Type..."
               type="number"
               value="18"
+            />
+            <div
+              class="flex justify-center align-middle"
+            >
+              <div
+                class="cursor-pointer hover:text-tremor-content dark:hover:text-dark-tremor-content flex mx-auto text-tremor-content-subtle dark:text-dark-tremor-content-subtle group py-[10px] px-2.5 border-l border-tremor-border dark:border-dark-tremor-border"
+                tabindex="-1"
+              >
+                <svg
+                  class=" h-4 w-4 duration-75 transition group-active:scale-95"
+                  data-testid="step-down"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20 12H4"
+                  />
+                </svg>
+              </div>
+              <div
+                class="cursor-pointer hover:text-tremor-content dark:hover:text-dark-tremor-content flex mx-auto text-tremor-content-subtle dark:text-dark-tremor-content-subtle group py-[10px] px-2.5 border-l border-tremor-border dark:border-dark-tremor-border"
+                tabindex="-1"
+              >
+                <svg
+                  class=" h-4 w-4 duration-75 transition group-active:scale-95"
+                  data-testid="step-up"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 4v16m8-8H4"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-wrap gap-4 items-center mb-4"
+        >
+          <p
+            class="text-tremor-default text-tremor-content dark:text-dark-tremor-content flex-grow"
+          >
+            Arrival Probability Multiplier (Percent):
+          </p>
+          <div
+            class="tremor-NumberInput-root relative flex items-center min-w-[10rem] outline-none rounded-tremor-default transition duration-100 border shadow-tremor-input dark:shadow-dark-tremor-input bg-tremor-background dark:bg-dark-tremor-background hover:bg-tremor-background-muted dark:hover:bg-dark-tremor-background-muted text-tremor-content-emphasis dark:text-dark-tremor-content-emphasis border-tremor-border dark:border-dark-tremor-border ml-2 w-20"
+          >
+            <input
+              class="tremor-NumberInput-input w-full focus:outline-none focus:ring-0 border-none bg-transparent text-tremor-default rounded-tremor-default transition duration-100 py-2 text-tremor-content-emphasis dark:text-dark-tremor-content-emphasis [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none pl-3 pr-4 placeholder:text-tremor-content dark:placeholder:text-dark-tremor-content"
+              data-testid="arrivalProbabilityMultiplier"
+              max="200"
+              min="20"
+              name="arrivalProbabilityMultiplier"
+              placeholder="Type..."
+              type="number"
+              value="100"
             />
             <div
               class="flex justify-center align-middle"

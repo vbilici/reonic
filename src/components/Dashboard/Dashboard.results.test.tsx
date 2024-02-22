@@ -1,12 +1,14 @@
 import { render } from '@testing-library/react';
 import DashboardResults from './Dashboard.results';
+import { SimulationResults } from '@/app/libs/simulator/simulator';
 
 describe('DashboardResults', () => {
-  const mockResults = {
+  const mockResults:SimulationResults = {
     totalEnergyConsumed: 100,
     theoreticalMaxDemand: 10,
     peakPowerDemand: 5,
     concurrencyFactor: 80,
+    dailyUsagePerChargepoint: {}
   };
 
   it('renders the correct values', () => {
@@ -22,7 +24,7 @@ describe('DashboardResults', () => {
     expect(getByText('5 KW')).toBeInTheDocument();
 
     expect(getByText('Concurrency Factor')).toBeInTheDocument();
-    expect(getByText('80 %')).toBeInTheDocument();
+    expect(getByText('80.00 %')).toBeInTheDocument();
   });
 
   it('matches snapshot', () => {

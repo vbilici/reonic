@@ -3,7 +3,7 @@
 exports[`DashboardResults matches snapshot 1`] = `
 <div>
   <div
-    class="tremor-Card-root relative w-full text-left ring-1 rounded-tremor-default p-6 bg-tremor-background ring-tremor-ring shadow-tremor-card dark:bg-dark-tremor-background dark:ring-dark-tremor-ring dark:shadow-dark-tremor-card border-tremor-brand dark:border-dark-tremor-brand mx-auto"
+    class="tremor-Card-root relative w-full text-left ring-1 rounded-tremor-default p-6 bg-tremor-background ring-tremor-ring shadow-tremor-card dark:bg-dark-tremor-background dark:ring-dark-tremor-ring dark:shadow-dark-tremor-card border-tremor-brand dark:border-dark-tremor-brand mx-auto mb-6"
   >
     <ul
       class="tremor-List-root w-full divide-y divide-tremor-border text-tremor-content dark:divide-dark-tremor-border dark:text-dark-tremor-content"
@@ -48,11 +48,230 @@ exports[`DashboardResults matches snapshot 1`] = `
           Concurrency Factor
         </span>
         <span>
-          80
+          80.00
            %
         </span>
       </li>
     </ul>
+  </div>
+  <div
+    class="tremor-Card-root relative w-full text-left ring-1 rounded-tremor-default p-6 bg-tremor-background ring-tremor-ring shadow-tremor-card dark:bg-dark-tremor-background dark:ring-dark-tremor-ring dark:shadow-dark-tremor-card border-tremor-brand dark:border-dark-tremor-brand mx-auto"
+  >
+    <p
+      class="text-tremor-content-emphasis dark:text-dark-tremor-content-emphasis"
+    >
+      Charging Point Usage(KwH) per day in a year
+    </p>
+    <div
+      class="w-full min-w-[10rem] relative text-tremor-default"
+    >
+      <select
+        class="h-full w-full absolute left-0 top-0 z-0 opacity-0"
+        id="chargingPoint"
+        name="chargingPoint"
+        title="select-hidden"
+      >
+        <option
+          class="hidden"
+          disabled=""
+          hidden=""
+          value=""
+        >
+          Select...
+        </option>
+        <option
+          class="hidden"
+          value="0"
+        >
+          Charging Point 
+          0
+        </option>
+        <option
+          class="hidden"
+          value="1"
+        >
+          Charging Point 
+          1
+        </option>
+        <option
+          class="hidden"
+          value="2"
+        >
+          Charging Point 
+          2
+        </option>
+        <option
+          class="hidden"
+          value="3"
+        >
+          Charging Point 
+          3
+        </option>
+        <option
+          class="hidden"
+          value="4"
+        >
+          Charging Point 
+          4
+        </option>
+        <option
+          class="hidden"
+          value="5"
+        >
+          Charging Point 
+          5
+        </option>
+        <option
+          class="hidden"
+          value="6"
+        >
+          Charging Point 
+          6
+        </option>
+        <option
+          class="hidden"
+          value="7"
+        >
+          Charging Point 
+          7
+        </option>
+        <option
+          class="hidden"
+          value="8"
+        >
+          Charging Point 
+          8
+        </option>
+        <option
+          class="hidden"
+          value="9"
+        >
+          Charging Point 
+          9
+        </option>
+        <option
+          class="hidden"
+          value="10"
+        >
+          Charging Point 
+          10
+        </option>
+        <option
+          class="hidden"
+          value="11"
+        >
+          Charging Point 
+          11
+        </option>
+        <option
+          class="hidden"
+          value="12"
+        >
+          Charging Point 
+          12
+        </option>
+        <option
+          class="hidden"
+          value="13"
+        >
+          Charging Point 
+          13
+        </option>
+        <option
+          class="hidden"
+          value="14"
+        >
+          Charging Point 
+          14
+        </option>
+        <option
+          class="hidden"
+          value="15"
+        >
+          Charging Point 
+          15
+        </option>
+        <option
+          class="hidden"
+          value="16"
+        >
+          Charging Point 
+          16
+        </option>
+        <option
+          class="hidden"
+          value="17"
+        >
+          Charging Point 
+          17
+        </option>
+        <option
+          class="hidden"
+          value="18"
+        >
+          Charging Point 
+          18
+        </option>
+        <option
+          class="hidden"
+          value="19"
+        >
+          Charging Point 
+          19
+        </option>
+      </select>
+      <div
+        class="w-full min-w-[10rem] relative text-tremor-default mt-2"
+        data-headlessui-state=""
+        id="chargingPoint"
+      >
+        <button
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          class="w-full outline-none text-left whitespace-nowrap truncate rounded-tremor-default focus:ring-2 transition duration-100 border pr-8 py-2 shadow-tremor-input focus:border-tremor-brand-subtle focus:ring-tremor-brand-muted dark:shadow-dark-tremor-input dark:focus:border-dark-tremor-brand-subtle dark:focus:ring-dark-tremor-brand-muted pl-3 bg-tremor-background dark:bg-dark-tremor-background hover:bg-tremor-background-muted dark:hover:bg-dark-tremor-background-muted text-tremor-content-emphasis dark:text-dark-tremor-content-emphasis border-tremor-border dark:border-dark-tremor-border"
+          data-headlessui-state=""
+          id="headlessui-listbox-button-:r1:"
+          type="button"
+        >
+          <span
+            class="w-[90%] block truncate"
+          >
+            Charging Point 0
+          </span>
+          <span
+            class="absolute inset-y-0 right-0 flex items-center mr-3"
+          >
+            <svg
+              class="tremor-Select-arrowDownIcon flex-none h-5 w-5 text-tremor-content-subtle dark:text-dark-tremor-content-subtle"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      class="w-full h-80"
+    >
+      <div
+        class="h-full w-full"
+      >
+        <div
+          class="tremor-Flex-root flex flex-row justify-center items-center w-full h-full border border-dashed rounded-tremor-default border-tremor-border dark:border-dark-tremor-border"
+        >
+          <p
+            class="text-tremor-default text-tremor-content dark:text-dark-tremor-content"
+          >
+            No data
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;

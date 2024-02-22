@@ -32,6 +32,7 @@ describe('ConfigForm', () => {
       numberOfChargepoints: 30,
       chargingPowerPerChargepoint: 15,
       consumptionOfCars: 20,
+      arrivalProbabilityMultiplier: 100
     });
   });
 
