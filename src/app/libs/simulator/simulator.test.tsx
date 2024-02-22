@@ -1,12 +1,13 @@
-import { runTheSimulation } from './simulator';
+import { SimulatorParams, runTheSimulation } from './simulator';
 
 describe('runTheSimulation', () => {
 
   it('calculates the theoretical maximum power demand correctly', () => {
-    const params = {
+    const params: SimulatorParams = {
       numberOfChargepoints: 30,
       chargingPowerPerChargepoint: 15,
       consumptionOfCars: 20,
+      arrivalProbabilityMultiplier: 100
     };
 
     const result = runTheSimulation(params);
@@ -16,10 +17,11 @@ describe('runTheSimulation', () => {
 
 
   it('calculates the maximum demand correctly', () => {
-    const params = {
+    const params: SimulatorParams = {
       numberOfChargepoints: 20,
       chargingPowerPerChargepoint: 11,
       consumptionOfCars: 18,
+      arrivalProbabilityMultiplier: 100
     };
 
     const result = runTheSimulation(params);
@@ -29,10 +31,11 @@ describe('runTheSimulation', () => {
 
 
   it('calculates the concurrency factor correctly', () => {
-    const params = {
+    const params: SimulatorParams = {
       numberOfChargepoints: 20,
       chargingPowerPerChargepoint: 11,
       consumptionOfCars: 18,
+      arrivalProbabilityMultiplier: 100
     };
 
     const result = runTheSimulation(params);
