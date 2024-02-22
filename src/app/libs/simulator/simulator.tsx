@@ -5,6 +5,7 @@ import {
 
 
 export type SimulationResults = {
+  numberOfChargepoints: number;
   totalEnergyConsumed: number;
   theoreticalMaxDemand: number;
   peakPowerDemand: number;
@@ -143,7 +144,8 @@ export function runTheSimulation(params: SimulatorParams): SimulationResults{
     theoreticalMaxDemand,
     peakPowerDemand,
     concurrencyFactor,
-    dailyUsagePerChargepoint
+    dailyUsagePerChargepoint,
+    numberOfChargepoints
   };
 }
 

@@ -26,7 +26,7 @@ const DashboardEvUsageChart: React.FC<{
       >
         {Array.from(Array(totalNumberOfCP).keys()).map((i) => (
           <SelectItem key={i} value={i.toString()} icon={BoltIcon}>
-            Charging Point {i}
+            Charging Point {i + 1}
           </SelectItem>
         ))}
       </Select>

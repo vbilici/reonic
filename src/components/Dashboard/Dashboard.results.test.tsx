@@ -8,6 +8,7 @@ describe('DashboardResults', () => {
     theoreticalMaxDemand: 10,
     peakPowerDemand: 5,
     concurrencyFactor: 80,
+    numberOfChargepoints: 20,
     dailyUsagePerChargepoint: {}
   };
 

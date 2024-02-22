@@ -11,9 +11,17 @@ import { useEffect, useState } from "react";
 import DashboardEvUsageChart from "./Dashboard.EvUsageChart";
 
 export default function DashboardResults(results: SimulationResults) {
-  const [dailyUsagePerChargepoint, setDailyUsagePerChargepoint] = useState<
+  const [dailyUsageforOneCP, setDailyUsageforOneCP] = useState<
     DailyChargepointUsageVisualisation[]
   >([]);
+  const {
+    totalEnergyConsumed,
+    theoreticalMaxDemand,
+    peakPowerDemand,
+    concurrencyFactor,
+    dailyUsagePerChargepoint,
+    numberOfChargepoints
+  } = results;
 
   const [dailyAvg, setDailyAvg] = useState<number>(0);
   const [selectedCP, setSelectedCP] = useState<number>(0);
@@ -21,13 +29,12 @@ export default function DashboardResults(results: SimulationResults) {
   useEffect(() => {
     const dailyUsagePerChargepointDict = getDailyUsageforOneCP(
       selectedCP,
-      results.dailyUsagePerChargepoint
+      dailyUsagePerChargepoint
     );
-    setDailyUsagePerChargepoint(dailyUsagePerChargepointDict);
+    setDailyUsageforOneCP(dailyUsagePerChargepointDict);
 
-    setDailyAvg(getDailyAvgUsageForOnCP(selectedCP, results.dailyUsagePerChargepoint));
-
-  }, [results.dailyUsagePerChargepoint, selectedCP, dailyAvg]);
+    setDailyAvg(getDailyAvgUsageForOnCP(selectedCP, dailyUsagePerChargepoint));
+  }, [dailyUsagePerChargepoint, selectedCP, dailyAvg]);
 
   const handleSelectedCPChange = (cp: number) => {
     setSelectedCP(cp);
@@ -39,25 +46,25 @@ export default function DashboardResults(results: SimulationResults) {
         <List>
           <ListItem>
             <span>Total Energy Consumed</span>
-            <span>{results.totalEnergyConsumed.toFixed(2)} KWh</span>
+            <span>{totalEnergyConsumed.toFixed(2)} KWh</span>
           </ListItem>
           <ListItem>
             <span>Theoritical Max Demand</span>
-            <span>{results.theoreticalMaxDemand} KW</span>
+            <span>{theoreticalMaxDemand} KW</span>
           </ListItem>
           <ListItem>
             <span>Peak Power Demand</span>
-            <span>{results.peakPowerDemand} KW</span>
+            <span>{peakPowerDemand} KW</span>
           </ListItem>
           <ListItem>
             <span>Concurrency Factor</span>
-            <span>{results.concurrencyFactor.toFixed(2)} %</span>
+            <span>{concurrencyFactor.toFixed(2)} %</span>
           </ListItem>
         </List>
       </Card>
       <DashboardEvUsageChart
-        data={dailyUsagePerChargepoint}
-        totalNumberOfCP={20}
+        data={dailyUsageforOneCP}
+        totalNumberOfCP={numberOfChargepoints}
         selectedCP={selectedCP}
         onSelectedCpChange={handleSelectedCPChange}
         avgDailyUsage={dailyAvg}
