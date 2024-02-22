@@ -24,7 +24,7 @@ export interface ChargepointUsage {
   [chargepoint: number]: number[];
 }
 
-export interface DailyUsagePerChargepoint {
+export interface DailyUsagePerChargepoints {
   [chargepoint: number]: number[];
 }
 

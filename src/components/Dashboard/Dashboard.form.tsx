@@ -35,7 +35,7 @@ const ConfigForm: React.FC<DashboardFormProps> = ({onSubmit}) => {
         <div className="">
 
           {/* 'we can create our custom re-usable components here' */}
-          <div className="flex flex-wrap gap-4 items-center mb-4">
+          <div className="flex flex-wrap items-center mb-4">
             <Text className="flex-grow">Number of Chargepoints:</Text>
             <NumberInput
               name="numberOfChargepoints"
@@ -45,7 +45,7 @@ const ConfigForm: React.FC<DashboardFormProps> = ({onSubmit}) => {
               data-testid="numberOfChargepoints"
             />
           </div>
-          <div className="flex flex-wrap gap-4 items-center mb-4">
+          <div className="flex flex-wrap items-center mb-4">
             <Text className="flex-grow">Charging Power per Chargepoint (Kw):</Text>
             <NumberInput
               name="chargingPowerPerChargepoint"
@@ -55,7 +55,7 @@ const ConfigForm: React.FC<DashboardFormProps> = ({onSubmit}) => {
               data-testid="chargingPowerPerChargepoint"
             />
           </div>
-          <div className="flex flex-wrap gap-4 items-center mb-4">
+          <div className="flex flex-wrap items-center mb-4">
             <Text className="flex-grow">Consumption of Cars:</Text>
             <NumberInput
               name="consumptionOfCars"
@@ -65,7 +65,7 @@ const ConfigForm: React.FC<DashboardFormProps> = ({onSubmit}) => {
               data-testid="consumptionOfCars"
             />
           </div>
-          <div className="flex flex-wrap gap-4 items-center mb-4">
+          <div className="flex flex-wrap items-center mb-4">
             <Text className="flex-grow">Arrival Probability Multiplier (Percent):</Text>
             <NumberInput
               name="arrivalProbabilityMultiplier"
@@ -77,9 +77,9 @@ const ConfigForm: React.FC<DashboardFormProps> = ({onSubmit}) => {
               data-testid="arrivalProbabilityMultiplier"
             />
           </div>
-          <div className="flex flex-row gap-4 items-center">
+          <div className="flex flex-row justify-end  items-center">
 
-            <Button type="submit" className="col-start-2 w-40 ml-2">Run The Simulation</Button>
+            <Button type="submit" className="col-start-2 w-40 ml-2 ">Run The Simulation</Button>
           </div>
         </div>
 

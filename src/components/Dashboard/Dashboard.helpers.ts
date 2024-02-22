@@ -1,4 +1,4 @@
-import { DailyUsagePerChargepoint } from "@/app/libs/simulator/simulator";
+import { DailyUsagePerChargepoints } from "@/app/libs/simulator/simulator";
 
 // Function to convert a single chargepoint's daily usage to array of objects for visualisation matters
 export interface DailyChargepointUsageVisualisation {
@@ -8,7 +8,7 @@ export interface DailyChargepointUsageVisualisation {
 
 export function getDailyUsageforOneCP(
   chargepointId: number,
-  dailyUsagePerChargepoint: DailyUsagePerChargepoint
+  dailyUsagePerChargepoint: DailyUsagePerChargepoints
 ): DailyChargepointUsageVisualisation[] {
   if (Object.keys(dailyUsagePerChargepoint).length === 0) return [];
   
@@ -17,3 +17,19 @@ export function getDailyUsageforOneCP(
     kWh,
   }));
 }
+
+    
+export function getDailyAvgUsageForOnCP(
+  chargepointId: number,
+  dailyUsagePerChargepoint: DailyUsagePerChargepoints
+): number {
+  if (Object.keys(dailyUsagePerChargepoint).length === 0) return 0;
+  
+  const dailyUsage = dailyUsagePerChargepoint[chargepointId];
+  const totalUsage = dailyUsage.reduce((sum, kWh) => sum + kWh, 0);
+  const averageUsage = totalUsage / dailyUsage.length;
+
+  return averageUsage;
+}
+
+    

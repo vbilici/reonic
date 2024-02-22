@@ -4,6 +4,7 @@ import { SimulationResults } from "@/app/libs/simulator/simulator";
 import { Card, List, ListItem } from "@tremor/react";
 import {
   DailyChargepointUsageVisualisation,
+  getDailyAvgUsageForOnCP,
   getDailyUsageforOneCP,
 } from "./Dashboard.helpers";
 import { useEffect, useState } from "react";
@@ -13,6 +14,8 @@ export default function DashboardResults(results: SimulationResults) {
   const [dailyUsagePerChargepoint, setDailyUsagePerChargepoint] = useState<
     DailyChargepointUsageVisualisation[]
   >([]);
+
+  const [dailyAvg, setDailyAvg] = useState<number>(0);
   const [selectedCP, setSelectedCP] = useState<number>(0);
 
   useEffect(() => {
@@ -21,6 +24,10 @@ export default function DashboardResults(results: SimulationResults) {
       results.dailyUsagePerChargepoint
     );
     setDailyUsagePerChargepoint(dailyUsagePerChargepointDict);
+
+    setDailyAvg(getDailyAvgUsageForOnCP(selectedCP, results.dailyUsagePerChargepoint));
+
+    console.log("dailyAvg", dailyAvg);
   }, [results.dailyUsagePerChargepoint, selectedCP]);
 
   const handleSelectedCPChange = (cp: number) => {
@@ -54,6 +61,7 @@ export default function DashboardResults(results: SimulationResults) {
         totalNumberOfCP={20}
         selectedCP={selectedCP}
         onSelectedCpChange={handleSelectedCPChange}
+        avgDailyUsage={dailyAvg}
       />
     </>
   );
