@@ -60,7 +60,7 @@ exports[`DashboardResults matches snapshot 1`] = `
     <p
       class="text-tremor-content-emphasis dark:text-dark-tremor-content-emphasis"
     >
-      Charging Point Usage(KwH) per day in a year
+      Charging Point Usage(KWh) per day in a year
     </p>
     <div
       class="w-full min-w-[10rem] relative text-tremor-default"
@@ -221,7 +221,7 @@ exports[`DashboardResults matches snapshot 1`] = `
         </option>
       </select>
       <div
-        class="w-full min-w-[10rem] relative text-tremor-default mt-2"
+        class="w-full min-w-[10rem] relative text-tremor-default mt-2 mb-6"
         data-headlessui-state=""
         id="chargingPoint"
       >
@@ -255,6 +255,17 @@ exports[`DashboardResults matches snapshot 1`] = `
         </button>
       </div>
     </div>
+    <p
+      class="text-tremor-default text-tremor-content dark:text-dark-tremor-content"
+    >
+      Average Daily usage per year: 
+      <span
+        class="font-bold"
+      >
+        0.00
+         KWh
+      </span>
+    </p>
     <div
       class="w-full h-80"
     >
