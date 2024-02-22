@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DashboardResults matches snapshot 1`] = `
+<div>
+  <div
+    class="tremor-Card-root relative w-full text-left ring-1 rounded-tremor-default p-6 bg-tremor-background ring-tremor-ring shadow-tremor-card dark:bg-dark-tremor-background dark:ring-dark-tremor-ring dark:shadow-dark-tremor-card border-tremor-brand dark:border-dark-tremor-brand mx-auto"
+  >
+    <ul
+      class="tremor-List-root w-full divide-y divide-tremor-border text-tremor-content dark:divide-dark-tremor-border dark:text-dark-tremor-content"
+    >
+      <li
+        class="tremor-ListItem-root w-full flex justify-between items-center text-tremor-default py-2"
+      >
+        <span>
+          Total Energy Consumed
+        </span>
+        <span>
+          100.00
+           KWh
+        </span>
+      </li>
+      <li
+        class="tremor-ListItem-root w-full flex justify-between items-center text-tremor-default py-2"
+      >
+        <span>
+          Theoritical Max Demand
+        </span>
+        <span>
+          10
+           KW
+        </span>
+      </li>
+      <li
+        class="tremor-ListItem-root w-full flex justify-between items-center text-tremor-default py-2"
+      >
+        <span>
+          Peak Power Demand
+        </span>
+        <span>
+          5
+           KW
+        </span>
+      </li>
+      <li
+        class="tremor-ListItem-root w-full flex justify-between items-center text-tremor-default py-2"
+      >
+        <span>
+          Concurrency Factor
+        </span>
+        <span>
+          80
+           %
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
