@@ -9,7 +9,7 @@ export type SimulationResults = {
   theoreticalMaxDemand: number;
   peakPowerDemand: number;
   concurrencyFactor: number;
-  dailyUsagePerChargepoint: DailyUsagePerChargepoint;
+  dailyUsagePerChargepoint: DailyUsagePerChargepoints;
 };
 
 export type SimulatorParams = {
@@ -115,7 +115,7 @@ export function runTheSimulation(params: SimulatorParams): SimulationResults{
   let theoreticalMaxDemand = numberOfChargepoints * chargingPowerPerChargepoint;
   let concurrencyFactor = (peakPowerDemand / theoreticalMaxDemand) * 100;
 
-  let dailyUsagePerChargepoint: DailyUsagePerChargepoint = {};
+  let dailyUsagePerChargepoint: DailyUsagePerChargepoints = {};
 
   Object.keys(chargepointUsage).forEach((chargepoint:any) => {
     dailyUsagePerChargepoint[chargepoint] = [];

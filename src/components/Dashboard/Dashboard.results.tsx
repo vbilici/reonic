@@ -28,7 +28,7 @@ export default function DashboardResults(results: SimulationResults) {
     setDailyAvg(getDailyAvgUsageForOnCP(selectedCP, results.dailyUsagePerChargepoint));
 
     console.log("dailyAvg", dailyAvg);
-  }, [results.dailyUsagePerChargepoint, selectedCP]);
+  }, [results.dailyUsagePerChargepoint, selectedCP, dailyAvg]);
 
   const handleSelectedCPChange = (cp: number) => {
     setSelectedCP(cp);
